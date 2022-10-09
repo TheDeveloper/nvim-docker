@@ -1,0 +1,14 @@
+#!/bin/bash
+
+nvim () {
+  path="$1"
+  
+  if [ -z "$path" ] || \
+     [ "$path" == "." ] || \
+     [ "path" == "./" ]
+  then
+	  path="$(pwd)"
+	fi
+	
+  docker run --rm -v "$path":/root/workspace -it thedeveloper/nvim:latest nvim
+}
