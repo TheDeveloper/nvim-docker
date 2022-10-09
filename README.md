@@ -14,3 +14,9 @@ docker ps -a
 sudo docker commit <container-id> thedeveloper/nvim
 docker push thedeveloper/nvim
 ```
+
+# Use
+```bash
+source nvim
+nvim <path>
+```
